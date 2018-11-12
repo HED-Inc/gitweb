@@ -27,9 +27,7 @@ load when start image load file in
 ## Command
 
 - addrepos: add repository
-- addauth : add user for git
 - rmrepos : remove repository
-- rmauth : remove user
 
 ## Usage direct
 
@@ -66,7 +64,6 @@ File 00_init.sh
         chmod -R g+ws .
         chgrp -R nginx .
     fi
-    addauth $GITUSER $GITPASSWORD
 
 build image mygit
 

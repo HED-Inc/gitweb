@@ -31,17 +31,9 @@ RUN chmod +x -R /usr/share/gitweb/docker-entrypoint.pre
 
 # add cmd gitweb
 COPY ./src/cmd/addrepos.sh /usr/bin/addrepos
-COPY ./src/cmd/addauth.sh /usr/bin/addauth
 COPY ./src/cmd/rmrepos.sh /usr/bin/rmrepos
-COPY ./src/cmd/rmauth.sh /usr/bin/rmauth
 RUN chmod +x /usr/bin/addrepos
-RUN chmod +x /usr/bin/addauth
 RUN chmod +x /usr/bin/rmrepos
-RUN chmod +x /usr/bin/rmauth
-
-# manage default value
-ENV GITUSER gituser
-ENV GITPASSWORD gitpassword
 
 # add ihm mdl
 ENV IHM no-mdl

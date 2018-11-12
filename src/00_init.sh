@@ -8,6 +8,3 @@ if [ ! -z "$GITPROJECT" ]; then
         chgrp -R nginx .
     fi
 fi
-if [ ! -z "$GITUSER" ]; then
-    addauth $GITUSER $GITPASSWORD
-fi 
